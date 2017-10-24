@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <menu>
+        <catalog>        
+          <children>
+            <urlrewrite> <!-- Same as <convert> -->
+                <depends>
+                    <module>HideMe</module> <!-- Fake dependance to hide menu item -->
+                </depends>
+            </urlrewrite>
+          </children>          
+         </catalog>   
+    </menu>
+</config>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<widgets>
+    <blogs_list type="blogs/last" translate="name description" module="blogs">
+        <name>Blogs: Latest Posts</name>
+        <description>Adds a list of latest post from Blogs</description>
+        <parameters>
+            <blocks_count>
+                <label>How many blocks to show</label>
+                <type>text</type>
+                <visible>1</visible>
+                <required>1</required>
+            </blocks_count>
+            <categories>
+                <label>Categories to show</label>
+                <type>multiselect</type>
+                <source_model>blogs/system_config_source_categories</source_model>
+                <visible>1</visible>
+                <required>1</required>
+            </categories>
+        </parameters>
+    </blogs_list>
+</widgets>
