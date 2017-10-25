@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <blogs module="blogs">
+            <title>Blogs</title>
+            <sort_order>71</sort_order>
+            <children>
+                <new module="blogs" translate="title">
+                    <title>Add Post</title>
+                    <sort_order>0</sort_order>
+                    <action>adminhtml/awblogs_manage_blogs/new</action>
+                </new>
+                <posts module="blogs" translate="title">
+                    <title>Posts</title>
+                    <sort_order>10</sort_order>
+                    <action>adminhtml/awblogs_manage_blogs/index</action>
+                </posts>
+                <comment module="blogs" translate="title">
+                    <title>Comments</title>
+                    <sort_order>20</sort_order>
+                    <action>adminhtml/awblogs_manage_comment</action>
+                </comment>
+                <cat module="blogs">
+                    <title>Categories</title>
+                    <sort_order>30</sort_order>
+                    <action>adminhtml/awblogs_manage_cat</action>
+                </cat>
+                <settings translate="title" module="blogs">
+                    <title>Settings</title>
+                    <action>adminhtml/system_config/edit/section/blogs</action>
+                    <sort_order>40</sort_order>
+                </settings>
+            </children>
+        </blogs>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <blogs>
+                        <title>Blogs</title>
+                        <sort_order>70</sort_order>
+                        <children>
+                            <posts>
+                                <title>Manage Posts</title>
+                                <sort_order>0</sort_order>
+                            </posts>
+                            <comment>
+                                <title>Manage Comments</title>
+                                <sort_order>1</sort_order>
+                            </comment>
+                            <cat>
+                                <title>Manage Categories</title>
+                                <sort_order>2</sort_order>
+                            </cat>
+                        </children>
+                    </blogs>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <blogs>
+                                        <title>aheadWorks Blogs Section</title>
+                                    </blogs>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

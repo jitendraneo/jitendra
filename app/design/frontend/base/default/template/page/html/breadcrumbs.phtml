@@ -1,0 +1,45 @@
+ <?php if($crumbs && is_array($crumbs)): ?>
+    <!-- SLIDER START HERE-->
+    <div class="container">
+      <div class="innerSlider relative">
+
+        <div class="innerSlidercontent">
+          <h2>“People with thyroid problems avoid eating millet on a daily basis 
+      as it is believed to contain some”</h2>
+        </div>
+        <div class="insideSlidePic"> <img src="<?php echo $this->getSkinUrl('images/barnyard_millet_bisi_belle_bhaat_recipe.jpg'); ?>"  
+      alt=""> </div>
+      </div>
+
+      <div class="clear"></div>
+
+      <ul class="routeMenu">
+        <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
+            <li class="<?php echo $_crumbName ?>">
+            <?php if($_crumbInfo['link']): 
+
+               if($_crumbInfo['title']=="Home"){
+                $_crumbInfo['link']=Mage::getUrl();
+            }
+            ?>
+                <a class="sc_hover" href="<?php echo $_crumbInfo['link'] ?>" 
+    title="<?php echo $this->escapeHtml($_crumbInfo['title']) ?>"><?php echo 
+   $this->escapeHtml($_crumbInfo['label']) ?></a>
+            <?php elseif($_crumbInfo['last']): ?>
+                <span><?php echo $this->escapeHtml($_crumbInfo['label']) ?>
+      </span>
+            <?php else: ?>
+                <?php echo $this->escapeHtml($_crumbInfo['label']) ?>
+            <?php endif; ?>
+            <?php if(!$_crumbInfo['last']): ?>
+
+            <?php endif; ?>
+            </li>
+        <?php endforeach; ?>
+      </ul>
+      </div>
+      <div class="clear"></div>
+      </div>
+
+      <!-- SLIDER END HERE-->
+       <?php endif; ?>
